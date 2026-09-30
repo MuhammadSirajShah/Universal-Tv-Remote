@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:universal_tv_remote/screens/wifi%20discovery/wifi_discovery_screen.dart';
 
 class AddTvScreen extends StatelessWidget {
   const AddTvScreen({super.key});
@@ -50,7 +51,12 @@ class AddTvScreen extends StatelessWidget {
                 'Connect a compatible Smart TV using the same Wi-Fi network.',
                 iconColor: Colors.indigo,
                 onTap: () {
-                  _showComingSoon(context, 'Wi-Fi Remote');
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const WifiDiscoveryScreen(),
+                      ),
+                  );
                 },
               ),
 
